@@ -1,0 +1,103 @@
+@import 'media-queries';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Titillium Web', sans-serif;
+    text-decoration: none;
+}
+
+.signFont{
+    font-family: 'Caveat', cursive;
+    font-style: italic;
+    font-weight: 400;
+}
+
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+body{
+    background-image: url(../img/bgimage.jpg);
+    background-position: center;
+    background-size: cover;
+    
+}
+
+header{
+    height: 15vh;
+    flex: wrap;
+
+    img{
+        width: 7rem;
+        height: 7rem;
+        cursor: pointer;
+
+        @include tablet{
+            width: 9rem;
+            height: 9rem;
+            position: relative;
+            left: 1rem;
+
+        }
+        @include mobile{
+            width: 7rem;
+            height: 7rem;
+            position: relative;
+            left: 1rem;
+
+        }
+    }
+
+    h4{
+        color: #fff;
+        font-weight: 600;
+        font-size: 1.5rem;
+        position: relative;
+        top: 1.5rem;
+        right: 2rem;
+        @include mobile{
+            font-size: 1rem;
+            position: relative;
+            top: -0.5rem;
+        }
+        @include tablet{
+            font-size: 1.5rem;
+            position: relative;
+            top: -0.5rem;
+            right: 8rem;
+        }
+    }
+    a{
+        color: red;
+    }
+
+}
+
+.container{
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h1{
+        font-size: 3rem;
+        color: aliceblue;
+
+        @include mobile{
+            position: absolute;
+            left: 2rem;
+            top: 20rem;
+        }
+        @include tablet{
+            font-size: 4rem;
+            position: absolute;
+            left: 2rem;
+            top: 25rem;
+        }
+
+    }    
+}
