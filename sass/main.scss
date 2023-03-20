@@ -24,11 +24,18 @@ body {
     background-image: url(../img/bgimage.jpg);
     background-position: center;
     background-size: cover;
+
+    @include mobile {
+        background-size: 165%;
+    }
 }
 
 header {
     height: 15vh;
-    flex: wrap;
+
+    @include mobile{
+        flex-direction: column;
+    }
 
     img {
         width: 7rem;
@@ -41,8 +48,6 @@ header {
         @include mobile {
             width: 7rem;
             height: 7rem;
-            position: relative;
-            left: 1rem;
         }
     }
 
@@ -53,11 +58,12 @@ header {
         top: 1rem;
         right: 30rem;
         @include mobile {
+            
             font-size: 1.2rem;
             position: absolute;
             color: aliceblue;
-            top: 4.5rem;
-            right: 8rem;
+            top: 9.5rem;
+            right: 4rem;
         }
     }
     a {
@@ -83,8 +89,12 @@ header {
             font-size: 2.7rem;
             position: absolute;
             color: aliceblue;
-            left: 3rem;
-            top: 22rem;
+            left: 4rem;
+            top: 16rem;
+        }
+
+        h2{
+            
         }
     }
 }
