@@ -25,47 +25,53 @@ body {
 }
 
 header {
-  height: 15vh;
+  height: 23vh;
 }
 @media screen and (max-width: 500px) and (min-width: 50px) {
   header {
     flex-direction: column;
   }
 }
-header img {
-  width: 7rem;
-  height: 7rem;
+header .logo img {
+  height: 150px;
   cursor: pointer;
   position: relative;
-  top: 1rem;
+  top: -1rem;
   left: 0.2;
 }
-@media screen and (max-width: 500px) and (min-width: 50px) {
-  header img {
-    width: 7rem;
-    height: 7rem;
-    position: relative;
-    top: 0.5rem;
-  }
-}
-header h4 {
-  font-size: 1.5rem;
-  position: absolute;
+header .pc h4 {
+  font-size: 1.2rem;
+  position: relative;
   color: aliceblue;
-  top: 1rem;
-  right: 30rem;
+  right: 29rem;
+}
+header .pc a {
+  color: red;
 }
 @media screen and (max-width: 500px) and (min-width: 50px) {
-  header h4 {
-    font-size: 1.2rem;
-    position: absolute;
-    color: aliceblue;
-    top: 7.5rem;
-    right: 5rem;
+  header .mbl {
+    font-size: 1.1rem;
+    display: block;
   }
 }
-header a {
+@media screen and (max-width: 500px) and (min-width: 50px) {
+  header .mbl h4 {
+    color: aliceblue;
+    position: absolute;
+    top: 5.5rem;
+    left: 7.5rem;
+  }
+}
+header .mbl a {
   color: red;
+  position: absolute;
+  top: 7rem;
+  left: 9.2rem;
+}
+@media screen and (min-width: 800px) and (max-width: 3000px) {
+  header .mbl {
+    display: none;
+  }
 }
 
 .container {
@@ -87,7 +93,7 @@ header a {
     font-size: 2.7rem;
     position: absolute;
     color: aliceblue;
-    left: 6rem;
-    top: 13rem;
+    left: 4rem;
+    top: 7rem;
   }
 }/*# sourceMappingURL=main.css.map */
