@@ -25,9 +25,6 @@ body {
     background-position: center;
     background-size: cover;
 
-    @include mobile {
-        background-size: 165%;
-    }
 }
 
 header {
@@ -48,12 +45,14 @@ header {
         @include mobile {
             width: 7rem;
             height: 7rem;
+            position: relative;
+            top: 0.5rem;
         }
     }
 
     h4 {
         font-size: 1.5rem;
-        position: relative;
+        position: absolute;
         color: aliceblue;
         top: 1rem;
         right: 30rem;
@@ -62,8 +61,8 @@ header {
             font-size: 1.2rem;
             position: absolute;
             color: aliceblue;
-            top: 9.5rem;
-            right: 4rem;
+            top: 7.5rem;
+            right: 5rem;
         }
     }
     a {
@@ -89,12 +88,9 @@ header {
             font-size: 2.7rem;
             position: absolute;
             color: aliceblue;
-            left: 4rem;
-            top: 16rem;
+            left: 6rem;
+            top: 13rem;
         }
 
-        h2{
-            
-        }
     }
 }

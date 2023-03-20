@@ -23,11 +23,6 @@ body {
   background-position: center;
   background-size: cover;
 }
-@media screen and (max-width: 500px) and (min-width: 50px) {
-  body {
-    background-size: 165%;
-  }
-}
 
 header {
   height: 15vh;
@@ -49,11 +44,13 @@ header img {
   header img {
     width: 7rem;
     height: 7rem;
+    position: relative;
+    top: 0.5rem;
   }
 }
 header h4 {
   font-size: 1.5rem;
-  position: relative;
+  position: absolute;
   color: aliceblue;
   top: 1rem;
   right: 30rem;
@@ -63,8 +60,8 @@ header h4 {
     font-size: 1.2rem;
     position: absolute;
     color: aliceblue;
-    top: 9.5rem;
-    right: 4rem;
+    top: 7.5rem;
+    right: 5rem;
   }
 }
 header a {
@@ -90,7 +87,7 @@ header a {
     font-size: 2.7rem;
     position: absolute;
     color: aliceblue;
-    left: 4rem;
-    top: 16rem;
+    left: 6rem;
+    top: 13rem;
   }
 }/*# sourceMappingURL=main.css.map */
