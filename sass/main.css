@@ -43,9 +43,21 @@ body {
   -webkit-clip-path: polygon(43% 0%, 60% 0%, 30% 80vh, 40% 100%);
           clip-path: polygon(43% 0%, 60% 0%, 30% 80vh, 40% 100%);
 }
+@media screen and (max-width: 450px) {
+  .flexheading {
+    height: 2vh;
+    font-size: 10px;
+    margin: 18px 0px 18px 0px;
+  }
+}
 
 header {
   height: 100vh;
+}
+@media screen and (max-width: 450px) {
+  header {
+    height: 38vh;
+  }
 }
 header .topbar {
   height: 10vh;
@@ -54,16 +66,39 @@ header .topbar {
   align-items: start;
   justify-content: space-between;
 }
+@media screen and (max-width: 450px) {
+  header .topbar {
+    height: 9vh;
+  }
+}
 header .topbar .logo img {
   width: 140px;
   height: 60px;
   cursor: pointer;
+}
+@media screen and (max-width: 450px) {
+  header .topbar .logo img {
+    width: 121px;
+    height: 60px;
+    position: relative;
+    left: 100%;
+  }
+}
+@media screen and (max-width: 450px) {
+  header .topbar .menu {
+    visibility: hidden;
+  }
 }
 header .topbar .menu ul {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   list-style: none;
+}
+@media screen and (max-width: 450px) {
+  header .topbar .menu ul {
+    display: none;
+  }
 }
 header .topbar .menu li {
   display: flex;
@@ -83,14 +118,32 @@ header .topbar .menu li:hover {
 header .slider {
   height: 90vh;
 }
+@media screen and (max-width: 450px) {
+  header .slider {
+    height: 29vh;
+  }
+}
 header .slider img {
   height: 30rem;
+}
+@media screen and (max-width: 450px) {
+  header .slider img {
+    height: 13.2rem;
+    position: relative;
+    left: -20px;
+  }
 }
 header .slider .slider-content {
   flex-direction: column;
 }
 header .slider .slider-content h1 {
   font-size: 3.6rem;
+}
+@media screen and (max-width: 450px) {
+  header .slider .slider-content h1 {
+    font-size: 1.3rem;
+    text-align: center;
+  }
 }
 header .slider .slider-content button {
   margin-top: 10px;
@@ -102,11 +155,22 @@ header .slider .slider-content button {
   cursor: pointer;
   border-color: #fff;
 }
+@media screen and (max-width: 450px) {
+  header .slider .slider-content button {
+    width: 70px;
+    height: 30px;
+  }
+}
 header .slider .slider-content button a {
   text-decoration: none;
   font-size: 20px;
   font-weight: 400;
   color: aliceblue;
+}
+@media screen and (max-width: 450px) {
+  header .slider .slider-content button a {
+    font-size: 11px;
+  }
 }
 header .slider .slider-content button:hover {
   background-color: #2ecc71;
@@ -119,8 +183,19 @@ section .section-one {
   height: 90vh;
   background-image: linear-gradient(#ecf0f1, rgba(228, 234, 235, 0.7529411765));
 }
-section .section-one .options {
-  height: 25vh;
+@media screen and (max-width: 450px) {
+  section .section-one {
+    height: 73.6vh;
+  }
+}
+@media screen and (max-width: 450px) {
+  section .section-one .options {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    margin: 0;
+    height: 47vh;
+  }
 }
 section .section-one .options .a {
   flex-direction: column;
@@ -128,15 +203,32 @@ section .section-one .options .a {
   box-shadow: 0 4px 8px 0 rgba(188, 188, 188, 0.2), 0 6px 20px 0 rgba(132, 132, 132, 0.24);
   margin-left: 10px;
 }
+@media screen and (max-width: 450px) {
+  section .section-one .options .a {
+    margin: 0;
+  }
+}
 section .section-one .options .a h1 {
   font-size: 31px;
   color: #6b7475;
   word-spacing: 2px;
 }
+@media screen and (max-width: 450px) {
+  section .section-one .options .a h1 {
+    font-size: 20px;
+  }
+}
 section .section-one .options .a .underline {
   width: 100px;
   height: 3px;
   background-color: #e74c3c;
+}
+@media screen and (max-width: 450px) {
+  section .section-one .options .a .underline {
+    height: 2px;
+    width: 62px;
+    margin-bottom: 5px;
+  }
 }
 section .section-one .options .a p {
   margin-top: 3px;
@@ -145,17 +237,45 @@ section .section-one .options .a p {
   word-spacing: 2px;
   font-weight: 400;
 }
+@media screen and (max-width: 450px) {
+  section .section-one .options .a p {
+    font-size: 11px;
+    margin: 0;
+  }
+}
 section .section-one .options .b {
   margin-right: 10px;
+}
+@media screen and (max-width: 450px) {
+  section .section-one .options .b {
+    margin: 0;
+  }
 }
 section .section-one .bestproduct {
   height: 60vh;
 }
+@media screen and (max-width: 450px) {
+  section .section-one .bestproduct {
+    height: 26.5vh;
+  }
+}
 section .section-one .bestproduct img {
   width: 46vw;
 }
-section .section-one .bestproduct .grill {
+section .section-one .bestproduct .grill img {
   margin-right: 10px;
+}
+@media screen and (max-width: 450px) {
+  section .section-one .bestproduct .grill img {
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 40vw;
+  }
+}
+@media screen and (max-width: 450px) {
+  section .section-one .bestproduct .grill .biriwani img {
+    width: 40vw;
+  }
 }
 section .section-one .bestproduct label {
   font-size: calc(35px + 1.5vw);
@@ -168,7 +288,56 @@ section .section-one .bestproduct label {
   left: 185px;
   letter-spacing: 16px;
   animation: shadows 1.2s ease-in infinite;
-  text-shadow: 5px #e74c3c;
+}
+@media screen and (max-width: 450px) {
+  section .section-one .bestproduct label {
+    font-size: calc(23px + 0.5vw);
+    text-shadow: 2px 2px 0 var(--color-secondary), 4px 4px 0 var(--color-tertiary), 6px 6px var(--color-quaternary), 8px 8px 0 var(--color-quinary);
+    top: -74px;
+    left: 48px;
+    letter-spacing: 5px;
+    animation: shadows 1.2s ease-in infinite;
+  }
+  @keyframes shadows {
+    0% {
+      text-shadow: none;
+    }
+    10% {
+      transform: translate(-2px, -2px);
+      text-shadow: 2px 2px 0 var(--color-secondary);
+    }
+    20% {
+      transform: translate(-4px, -4px);
+      text-shadow: 2px 2px 0 var(--color-secondary), 4px 4px 0 var(--color-tertiary);
+    }
+    30% {
+      transform: translate(-6px, -6px);
+      text-shadow: 2px 2px 0 var(--color-secondary), 4px 4px 0 var(--color-tertiary), 6px 6px var(--color-quaternary);
+    }
+    40% {
+      transform: translate(-8px, -8px);
+      text-shadow: 2px 2px 0 var(--color-secondary), 4px 4px 0 var(--color-tertiary), 6px 6px var(--color-quaternary), 8px 8px 0 var(--color-quinary);
+    }
+    50% {
+      transform: translate(-8px, -8px);
+      text-shadow: 2px 2px 0 var(--color-secondary), 4px 4px 0 var(--color-tertiary), 6px 6px var(--color-quaternary), 8px 8px 0 var(--color-quinary);
+    }
+    60% {
+      text-shadow: 2px 2px 0 var(--color-secondary), 4px 4px 0 var(--color-tertiary), 6px 6px var(--color-quaternary), 8px 8px 0 var(--color-quinary);
+    }
+    70% {
+      text-shadow: 2px 2px 0 var(--color-secondary), 4px 4px 0 var(--color-tertiary), 6px 6px var(--color-quaternary);
+    }
+    80% {
+      text-shadow: 2px 2px 0 var(--color-secondary), 4px 4px 0 var(--color-tertiary);
+    }
+    90% {
+      text-shadow: 2px 2px 0 var(--color-secondary);
+    }
+    100% {
+      text-shadow: none;
+    }
+  }
 }
 @keyframes shadows {
   0% {
@@ -213,20 +382,47 @@ section .section-one .bestproduct label {
 section .section-two {
   height: 120vh;
 }
+@media screen and (max-width: 450px) {
+  section .section-two {
+    height: 94vh;
+  }
+}
 section .section-two .committee {
   height: 45vh;
+}
+@media screen and (max-width: 450px) {
+  section .section-two .committee {
+    height: 37.9vh;
+  }
 }
 section .section-two .committee img {
   height: 150px;
   width: 150px;
+}
+@media screen and (max-width: 450px) {
+  section .section-two .committee img {
+    height: 100px;
+    width: 100px;
+  }
 }
 section .section-two .committee .founder {
   width: 45vw;
   position: relative;
   top: -11vh;
 }
+@media screen and (max-width: 450px) {
+  section .section-two .committee .founder {
+    justify-content: space-around;
+    top: -11vh;
+  }
+}
 section .section-two .committee .founder div {
   margin-left: 20px;
+}
+@media screen and (max-width: 450px) {
+  section .section-two .committee .founder div {
+    margin-left: 6px;
+  }
 }
 section .section-two .committee .founder a {
   text-decoration: none;
@@ -238,10 +434,21 @@ section .section-two .committee .founder p {
   font-weight: 600;
   border-bottom: 1px solid red;
 }
+@media screen and (max-width: 450px) {
+  section .section-two .committee .founder p {
+    margin: 3px;
+    font-size: 9px;
+  }
+}
 section .section-two .committee .ceo {
   width: 45vw;
   position: relative;
   top: 11vh;
+}
+@media screen and (max-width: 450px) {
+  section .section-two .committee .ceo {
+    top: 5vh;
+  }
 }
 section .section-two .committee .ceo p {
   margin: 10px;
@@ -249,20 +456,48 @@ section .section-two .committee .ceo p {
   font-weight: 600;
   border-bottom: 1px solid red;
 }
+@media screen and (max-width: 450px) {
+  section .section-two .committee .ceo p {
+    margin: 3px;
+    font-size: 9px;
+  }
+}
 section .section-two .history {
   background-image: linear-gradient(#ecf0f1, rgba(228, 234, 235, 0.7529411765));
-  height: 45;
+  height: 45vh;
+}
+@media screen and (max-width: 450px) {
+  section .section-two .history {
+    flex-direction: column;
+    height: 96vw;
+  }
 }
 section .section-two .history img {
   position: relative;
   top: 3px;
   height: 15.3vw;
 }
+@media screen and (max-width: 450px) {
+  section .section-two .history img {
+    position: static;
+    height: 63.3vw;
+  }
+}
 section .section-two .history .img {
   width: 45vw;
 }
+@media screen and (max-width: 450px) {
+  section .section-two .history .img {
+    width: 95vw;
+  }
+}
 section .section-two .history .thehistory {
   width: 45vw;
+}
+@media screen and (max-width: 450px) {
+  section .section-two .history .thehistory {
+    width: 95vw;
+  }
 }
 
 footer {
@@ -273,6 +508,17 @@ footer {
 footer width {
   width: 33vw;
 }
+@media screen and (max-width: 450px) {
+  footer width {
+    width: 0;
+  }
+}
+@media screen and (max-width: 450px) {
+  footer .socialandlinks {
+    position: absolute;
+    left: 33%;
+  }
+}
 footer .logo2 {
   margin-bottom: 5px;
 }
@@ -280,6 +526,12 @@ footer .logo2 img {
   margin-top: 5px;
   width: 160px;
   height: 90px;
+}
+@media screen and (max-width: 450px) {
+  footer .logo2 img {
+    width: 125px;
+    height: 60px;
+  }
 }
 footer .social i {
   width: 17px;
@@ -304,13 +556,28 @@ footer .location {
   text-align: center;
   color: #ecf0f1;
 }
+@media screen and (max-width: 450px) {
+  footer .location {
+    visibility: hidden;
+  }
+}
 footer .location h3 {
   border-bottom: 1px dotted #c4302b;
+}
+@media screen and (max-width: 450px) {
+  footer .location h3 {
+    font-size: 15px;
+  }
 }
 footer .support {
   text-align: center;
   color: #ecf0f1;
   margin-right: 5vh;
+}
+@media screen and (max-width: 450px) {
+  footer .support {
+    visibility: hidden;
+  }
 }
 footer .support h3 {
   border-bottom: 1px dotted #c4302b;

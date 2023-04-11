@@ -1,3 +1,5 @@
+@import "media-queries";
+
 :root {
     --color-primary: #f6aca2;
     --color-secondary: #f49b90;
@@ -37,15 +39,27 @@ body {
     margin: 41px 0px 49px 0px;
     background-image: linear-gradient(#f1c40f, #cba50b);
     clip-path: polygon(43% 0%, 60% 0%, 30% 80vh, 40% 100%);
+    @include mobile {
+        height: 2vh;
+        font-size: 10px;
+        margin: 18px 0px 18px 0px;
+    }
 }
 header {
     height: 100vh;
+    @include mobile {
+        height: 38vh;
+    }
     .topbar {
         height: 10vh;
         background-color: #e74c3c;
         display: flex;
         align-items: start;
         justify-content: space-between;
+
+        @include mobile {
+            height: 9vh;
+        }
         .logo {
             // font-size: 2rem;
             // font-style: italic;
@@ -60,14 +74,26 @@ header {
                 width: 140px;
                 height: 60px;
                 cursor: pointer;
+                @include mobile {
+                    width: 121px;
+                    height: 60px;
+                    position: relative;
+                    left: 100%;
+                }
             }
         }
         .menu {
+            @include mobile {
+                visibility: hidden;
+            }
             ul {
                 display: flex;
                 align-items: center;
                 justify-content: space-evenly;
                 list-style: none;
+                @include mobile {
+                    display: none;
+                }
             }
             li {
                 display: flex;
@@ -89,13 +115,25 @@ header {
 
     .slider {
         height: 90vh;
+        @include mobile {
+            height: 29vh;
+        }
         img {
             height: 30rem;
+            @include mobile {
+                height: 13.2rem;
+                position: relative;
+                left: -20px;
+            }
         }
         .slider-content {
             flex-direction: column;
             h1 {
                 font-size: 3.6rem;
+                @include mobile {
+                    font-size: 1.3rem;
+                    text-align: center;
+                }
             }
             button {
                 margin-top: 10px;
@@ -106,16 +144,22 @@ header {
                 background-color: #e74c3c;
                 cursor: pointer;
                 border-color: #fff;
+                @include mobile {
+                    width: 70px;
+                    height: 30px;
+                }
                 a {
                     text-decoration: none;
                     font-size: 20px;
                     font-weight: 400;
                     color: aliceblue;
+                    @include mobile {
+                        font-size: 11px;
+                    }
                 }
 
                 &:hover {
                     background-color: #2ecc71;
-                    
                 }
             }
         }
@@ -127,24 +171,44 @@ section {
     .section-one {
         height: 90vh;
         background-image: linear-gradient(#ecf0f1, #e4eaebc0);
+        @include mobile {
+            height: 73.6vh;
+        }
         .options {
-            height: 25vh;
+            @include mobile {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-gap: 10px;
+                margin: 0;
+                height: 47vh;
+            }
 
             .a {
                 flex-direction: column;
                 height: 150px;
                 box-shadow: 0 4px 8px 0 rgba(188, 188, 188, 0.2), 0 6px 20px 0 rgba(132, 132, 132, 0.24);
                 margin-left: 10px;
+                @include mobile {
+                    margin: 0;
+                }
 
                 h1 {
                     font-size: 31px;
                     color: #6b7475;
                     word-spacing: 2px;
+                    @include mobile {
+                        font-size: 20px;
+                    }
                 }
                 .underline {
                     width: 100px;
                     height: 3px;
                     background-color: #e74c3c;
+                    @include mobile {
+                        height: 2px;
+                        width: 62px;
+                        margin-bottom: 5px;
+                    }
                 }
                 p {
                     margin-top: 3px;
@@ -152,21 +216,46 @@ section {
                     text-align: center;
                     word-spacing: 2px;
                     font-weight: 400;
+                    @include mobile {
+                        font-size: 11px;
+                        margin: 0;
+                    }
                 }
             }
             .b {
                 margin-right: 10px;
+                @include mobile {
+                    margin: 0;
+                }
             }
         }
 
         .bestproduct {
             height: 60vh;
+            @include mobile {
+                height: 26.5vh;
+            }
             img {
                 width: 46vw;
             }
             .grill {
-                margin-right: 10px;
+                img {
+                    margin-right: 10px;
+                    @include mobile {
+                        margin-left: 10px;
+                        margin-right: 10px;
+                        width: 40vw;
+                    }
+                }
+                .biriwani {
+                    img {
+                        @include mobile {
+                            width: 40vw;
+                        }
+                    }
+                }
             }
+
             label {
                 font-size: calc(35px + 1.5vw);
                 font-weight: 900;
@@ -179,7 +268,60 @@ section {
                 left: 185px;
                 letter-spacing: 16px;
                 animation: shadows 1.2s ease-in infinite;
-                text-shadow: 5px #e74c3c;
+                @include mobile{
+                    font-size: calc(23px + 0.5vw);
+                    text-shadow: 2px 2px 0 var(--color-secondary), 4px 4px 0 var(--color-tertiary),
+                        6px 6px var(--color-quaternary), 8px 8px 0 var(--color-quinary);
+                    top: -74px;
+                    left: 48px;
+                    letter-spacing: 5px;
+                    animation: shadows 1.2s ease-in infinite;
+                    @keyframes shadows {
+                        0% {
+                            text-shadow: none;
+                        }
+                        10% {
+                            transform: translate(-2px, -2px);
+                            text-shadow: 2px 2px 0 var(--color-secondary);
+                        }
+                        20% {
+                            transform: translate(-4px, -4px);
+                            text-shadow: 2px 2px 0 var(--color-secondary), 4px 4px 0 var(--color-tertiary);
+                        }
+                        30% {
+                            transform: translate(-6px, -6px);
+                            text-shadow: 2px 2px 0 var(--color-secondary), 4px 4px 0 var(--color-tertiary),
+                                6px 6px var(--color-quaternary);
+                        }
+                        40% {
+                            transform: translate(-8px, -8px);
+                            text-shadow: 2px 2px 0 var(--color-secondary), 4px 4px 0 var(--color-tertiary),
+                                6px 6px var(--color-quaternary), 8px 8px 0 var(--color-quinary);
+                        }
+                        50% {
+                            transform: translate(-8px, -8px);
+                            text-shadow: 2px 2px 0 var(--color-secondary), 4px 4px 0 var(--color-tertiary),
+                                6px 6px var(--color-quaternary), 8px 8px 0 var(--color-quinary);
+                        }
+                        60% {
+                            text-shadow: 2px 2px 0 var(--color-secondary), 4px 4px 0 var(--color-tertiary),
+                                6px 6px var(--color-quaternary), 8px 8px 0 var(--color-quinary);
+                        }
+                        70% {
+                            text-shadow: 2px 2px 0 var(--color-secondary), 4px 4px 0 var(--color-tertiary),
+                                6px 6px var(--color-quaternary);
+                        }
+                        80% {
+                            text-shadow: 2px 2px 0 var(--color-secondary), 4px 4px 0 var(--color-tertiary);
+                        }
+                        90% {
+                            text-shadow: 2px 2px 0 var(--color-secondary);
+                        }
+                        100% {
+                            text-shadow: none;
+                        }
+                    }
+                }
             }
             @keyframes shadows {
                 0% {
@@ -230,18 +372,35 @@ section {
     }
     .section-two {
         height: 120vh;
+        @include mobile{
+            height: 94vh;
+        }
         .committee {
             height: 45vh;
+            @include mobile{
+                height: 37.9vh;
+            }
             img {
                 height: 150px;
                 width: 150px;
+                @include mobile{
+                    height: 100px;
+                    width: 100px;
+                }
             }
             .founder {
                 width: 45vw;
                 position: relative;
                 top: -11vh;
+                @include mobile{
+                    justify-content: space-around;
+                    top: -11vh;
+                }
                 div {
                     margin-left: 20px;
+                    @include mobile{
+                        margin-left: 6px;
+                    }
                 }
                 a {
                     text-decoration: none;
@@ -252,33 +411,58 @@ section {
                     font-size: 16px;
                     font-weight: 600;
                     border-bottom: 1px solid red;
+                    @include mobile{
+                        margin: 3px;
+                        font-size: 9px;
+                    }
                 }
             }
             .ceo {
                 width: 45vw;
                 position: relative;
                 top: 11vh;
+                @include mobile{
+                    top: 5vh;
+                }
                 p {
                     margin: 10px;
                     font-size: 16px;
                     font-weight: 600;
                     border-bottom: 1px solid red;
+                    @include mobile{
+                        margin: 3px;
+                        font-size: 9px;
+                    }
                 }
             }
         }
         .history {
             background-image: linear-gradient(#ecf0f1, #e4eaebc0);
-            height: 45;
+            height: 45vh;
+            @include mobile{
+                flex-direction: column;
+                height: 96vw;
+            }
             img {
                 position: relative;
                 top: 3px;
                 height: 15.3vw;
+                @include mobile{
+                    position: static;
+                    height: 63.3vw;
+                }
             }
             .img {
                 width: 45vw;
+                @include mobile{
+                    width: 95vw;
+                }
             }
             .thehistory {
                 width: 45vw;
+                @include mobile{
+                    width: 95vw;
+                }
             }
         }
     }
@@ -289,12 +473,25 @@ footer {
     background-color: #34495e;
     width {
         width: 33vw;
+        @include mobile{
+            width: 0;
+        }
+    }
+    .socialandlinks{
+        @include mobile{
+            position: absolute;
+            left: 33%;
+        }
     }
     .logo2 {
         img {
             margin-top: 5px;
             width: 160px;
             height: 90px;
+            @include mobile{
+                width: 125px;
+                height: 60px;
+            }
         }
         margin-bottom: 5px;
     }
@@ -322,14 +519,23 @@ footer {
     .location {
         text-align: center;
         color: #ecf0f1;
+        @include mobile{
+            visibility: hidden;
+        }
         h3 {
             border-bottom: 1px dotted #c4302b;
+            @include mobile{
+                font-size: 15px;
+            }
         }
     }
     .support {
         text-align: center;
         color: #ecf0f1;
         margin-right: 5vh;
+        @include mobile{
+            visibility: hidden;
+        }
         h3 {
             border-bottom: 1px dotted #c4302b;
         }
